@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <title>Calculator</title>
+    <style>
+
+        body{
+            font-family: 'Orbitron', sans-serif;
+        }
+        .calculator-container {
+            background-color:black ;
+            height: 500px;
+            width: 400px;
+            margin-top: 150px;
+            margin-left: 500px;
+            border-radius: 20px;
+             box-shadow: 3px 5px 5px rgb(93, 92, 91);
+        }
+
+        .name{
+            color: white;
+            margin-left: 20px;
+            display: block;
+            padding-top: 20px;
+            font-size: 20px;
+
+    
+        }
+        .calculator-screen{
+            font-size: 45px;
+            width: 350px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            border-radius: 5px;
+            background-color: azure;
+            margin-bottom: 30px;
+            box-shadow: 3px 3px 5px rgb(93, 92, 91);
+        }
+
+        .calculator-button{
+            font-size: 30px;
+            width: 70px;
+            margin: 5px;
+            border-radius: 5px;
+            box-shadow: 3px 3px 5px rgb(93, 92, 91);
+            font-family: 'Orbitron', sans-serif;
+            height: 50px;
+            background-color: #ffffffab;
+            cursor: pointer;
+        }
+
+        .calculator-button1{
+            font-size: 35px;
+            width: 320px;
+            margin-left: 35px;
+            margin-top: 10px;
+            box-shadow: 3px 3px 5px rgb(93, 92, 91);
+            font-family: 'Orbitron', sans-serif;
+            cursor: pointer;
+        }
+
+         .button-container{
+            margin-left: 30px;
+            display: block;
+            
+           
+         }
+         .bg-red{
+            background-color: red;
+            color: white;
+         }
+
+         .bg-blue{
+            background-color: #50d8dc;
+         }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="calculator-container">
+        <p class="name">Calculator</p>
+
+        <input type="text" class="calculator-screen">
+
+        <div class="button-container">
+            <button class="calculator-button">7</button>
+            <button class="calculator-button">8</button>
+            <button class="calculator-button">9</button>
+            <button class="calculator-button bg-red" >C</button>
+        </div>
+
+        <div class="button-container">
+            <button class="calculator-button">4</button>
+            <button class="calculator-button">5</button>
+            <button class="calculator-button">6</button>
+            <button class="calculator-button bg-blue">/</button>
+        </div>
+
+        <div class="button-container">
+            <button class="calculator-button">1</button>
+            <button class="calculator-button">2</button>
+            <button class="calculator-button">3</button>
+            <button class="calculator-button bg-blue">*</button>
+        </div>
+
+        <div class="button-container">
+            <button class="calculator-button bg-blue">.</button>
+            <button class="calculator-button bg-blue">0</button>
+            <button class="calculator-button bg-blue">+</button>
+            <button class="calculator-button bg-blue">-</button>
+        </div>
+
+        
+            <button class="calculator-button1 bg-red">=</button>
+            
+        
+    </div>
+</body>
+
+</html>
