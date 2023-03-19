@@ -8,30 +8,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
     <title>Calculator</title>
     <style>
-
-        body{
+        body {
             font-family: 'Orbitron', sans-serif;
         }
+
         .calculator-container {
-            background-color:black ;
+            background-color: black;
             height: 500px;
             width: 400px;
             margin-top: 150px;
             margin-left: 500px;
             border-radius: 20px;
-             box-shadow: 3px 5px 5px rgb(93, 92, 91);
+            box-shadow: 3px 5px 5px rgb(93, 92, 91);
         }
 
-        .name{
+        .name {
             color: white;
             margin-left: 20px;
             display: block;
             padding-top: 20px;
             font-size: 20px;
 
-    
+
         }
-        .calculator-screen{
+
+        .calculator-screen {
             font-size: 45px;
             width: 350px;
             margin-left: auto;
@@ -41,9 +42,10 @@
             background-color: azure;
             margin-bottom: 30px;
             box-shadow: 3px 3px 5px rgb(93, 92, 91);
+            font-family: 'Orbitron', sans-serif;
         }
 
-        .calculator-button{
+        .calculator-button {
             font-size: 30px;
             width: 70px;
             margin: 5px;
@@ -55,7 +57,7 @@
             cursor: pointer;
         }
 
-        .calculator-button1{
+        .calculator-button1 {
             font-size: 35px;
             width: 320px;
             margin-left: 35px;
@@ -65,21 +67,21 @@
             cursor: pointer;
         }
 
-         .button-container{
+        .button-container {
             margin-left: 30px;
             display: block;
-            
-           
-         }
-         .bg-red{
+
+
+        }
+
+        .bg-red {
             background-color: red;
             color: white;
-         }
+        }
 
-         .bg-blue{
-            background-color: #50d8dc;
-         }
-
+        .bg-blue {
+            background-color: #3faeb2;
+        }
     </style>
 </head>
 
@@ -88,41 +90,63 @@
     <div class="calculator-container">
         <p class="name">Calculator</p>
 
-        <input type="text" class="calculator-screen">
+        <input type="text" class="calculator-screen" id="calculator-screen">
 
         <div class="button-container">
-            <button class="calculator-button">7</button>
-            <button class="calculator-button">8</button>
-            <button class="calculator-button">9</button>
-            <button class="calculator-button bg-red" >C</button>
+            <button class="calculator-button" onclick="handleClick(7)">7</button>
+            <button class="calculator-button" onclick="handleClick(8)">8</button>
+            <button class="calculator-button" onclick="handleClick(9)">9</button>
+            <button class="calculator-button bg-red" id="reset" onclick="reset()">C</button>
         </div>
 
         <div class="button-container">
-            <button class="calculator-button">4</button>
-            <button class="calculator-button">5</button>
-            <button class="calculator-button">6</button>
-            <button class="calculator-button bg-blue">/</button>
+            <button class="calculator-button" onclick="handleClick(4)">4</button>
+            <button class="calculator-button" onclick="handleClick(5)">5</button>
+            <button class="calculator-button" onclick="handleClick(6)">6</button>
+            <button class="calculator-button bg-blue" onclick="handleClick('/')">/</button>
         </div>
 
         <div class="button-container">
-            <button class="calculator-button">1</button>
-            <button class="calculator-button">2</button>
-            <button class="calculator-button">3</button>
-            <button class="calculator-button bg-blue">*</button>
+            <button class="calculator-button" onclick="handleClick(1)">1</button>
+            <button class="calculator-button" onclick="handleClick(2)">2</button>
+            <button class="calculator-button" onclick="handleClick(3)">3</button>
+            <button class="calculator-button bg-blue" onclick="handleClick('*')">*</button>
         </div>
 
         <div class="button-container">
-            <button class="calculator-button bg-blue">.</button>
-            <button class="calculator-button bg-blue">0</button>
-            <button class="calculator-button bg-blue">+</button>
-            <button class="calculator-button bg-blue">-</button>
+            <button class="calculator-button bg-blue" onclick="handleClick('.')">.</button>
+            <button class="calculator-button bg-blue" onclick="handleClick(0)">0</button>
+            <button class="calculator-button bg-blue" onclick="handleClick('+')">+</button>
+            <button class="calculator-button bg-blue" onclick="handleClick('-')">-</button>
         </div>
 
-        
-            <button class="calculator-button1 bg-red">=</button>
-            
-        
+
+        <button class="calculator-button1 bg-red" onclick="calculate()">=</button>
+
     </div>
+
+
+
+    <script>
+        function handleClick(num)
+        {
+            const a = document.getElementById("calculator-screen")
+            a.value = (a.value+num)
+        }
+
+        function calculate()
+        {
+            const a = document.getElementById("calculator-screen")
+            const ans = eval(a.value)
+            a.value = ans;
+        }
+
+        function reset()
+        {
+          
+           const reset =  document.getElementById("calculator-screen").value = ""
+        }
+    </script>
 </body>
 
 </html>
